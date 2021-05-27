@@ -35,35 +35,6 @@ const int INF32 = INT_MAX;
 
 void solve();
 
-int main() {
-#ifdef FAST_IO
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-    std::istream::sync_with_stdio(false);
-    cout.tie(nullptr);
-#endif
-#ifdef DEBUG
-    auto start = chrono::high_resolution_clock::now();
-    freopen("../input.in", "r", stdin);
-#endif
-#ifdef TESTS
-    int t;
-    cin >> t;
-    while (t--) {
-        solve();
-    }
-#else
-    solve();
-#endif
-#ifdef DEBUG
-    auto end = chrono::high_resolution_clock::now();
-    cout << endl << "_______________\nElapsed: "
-         << chrono::duration_cast<chrono::milliseconds>(end - start).count()
-         << " ms" << endl;
-#endif
-    return 0;
-}
-
 // @formatter:off
 // IN
 template<class T> void re(complex<T>& x);
@@ -127,10 +98,37 @@ template<class T>
 void nvec(const vector<T> &v) {int n = v.size(); ps('{'); for(int i=0;i<n;i++){ps(i," -> ", v[i]);} ps('}');}
 // @formatter:on
 
+int main() {
+#ifdef FAST_IO
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    std::istream::sync_with_stdio(false);
+    cout.tie(nullptr);
+#endif
+#ifdef DEBUG
+    auto start = chrono::high_resolution_clock::now();
+    freopen("../input.in", "r", stdin);
+#endif
+#ifdef TESTS
+    int t;
+    cin >> t;
+    while (t--) {
+        solve();
+    }
+#else
+    solve();
+#endif
+#ifdef DEBUG
+    auto end = chrono::high_resolution_clock::now();
+    cout << endl << "_______________\nElapsed: "
+         << chrono::duration_cast<chrono::milliseconds>(end - start).count()
+         << " ms" << endl;
+#endif
+    return 0;
+}
+
 //////////////////////// -- YOUR CODE GOES HERE -- ////////////////////////
 
 void solve() {
-    int n;
-    re(n);
-    ps(n);
+
 }
