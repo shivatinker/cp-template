@@ -105,7 +105,6 @@ int main() {
     std::istream::sync_with_stdio(false);
 #endif
 #ifdef DEBUG
-    auto start = chrono::high_resolution_clock::now();
     freopen("../input.in", "r", stdin);
 #endif
     int t = 1;
@@ -116,10 +115,7 @@ int main() {
         solve();
     }
 #ifdef DEBUG
-    auto end = chrono::high_resolution_clock::now();
-    cout << endl << "_______________\nElapsed: "
-         << chrono::duration_cast<chrono::milliseconds>(end - start).count()
-         << " ms" << endl;
+    cout << "Elapsed: " << 1.0 * clock() / CLOCKS_PER_SEC * 1000 << " ms\n";
 #endif
     return 0;
 }
