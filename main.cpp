@@ -27,10 +27,6 @@ mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 #define dbg(x...) 0x12c
 #endif
 
-#ifndef DEBUG
-#define gcd(x, y) __gcd(x, y)
-#endif
-
 const ll INF64 = LLONG_MAX;
 const int INF32 = INT_MAX;
 
@@ -131,4 +127,5 @@ int main() {
 //////////////////////// -- YOUR CODE GOES HERE -- ////////////////////////
 
 void solve() {
+
 }
