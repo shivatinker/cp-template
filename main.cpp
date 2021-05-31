@@ -1,10 +1,11 @@
 #define DOUBLE_PRECISION 8
 #define FAST_IO
-//#define TESTS
 
 #include <bits/stdc++.h>
 
 using namespace std;
+
+mt19937 rng(chrono::steady_clock::now().time_since_epoch().count());
 
 #define ll long long
 #define ld long double
@@ -52,6 +53,7 @@ template<class T, size_t SZ> void re(array<T,SZ>& a) { for(auto &v:a) re(v); }
 // OUT
 void pr(ll x) { cout << x; }
 void pr(int x) { pr((ll) x); }
+void pr(bool x) { pr(x ? 1: 0); }
 void pr(char x) { cout << x; }
 void pr(const string &x) { cout << x; }
 void pr(const char *x) { cout << x; }
@@ -98,26 +100,25 @@ template<class T>
 void nvec(const vector<T> &v) {int n = v.size(); ps('{'); for(int i=0;i<n;i++){ps(i," -> ", v[i]);} ps('}');}
 // @formatter:on
 
+#define TESTS 0
+
 int main() {
 #ifdef FAST_IO
     ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     std::istream::sync_with_stdio(false);
-    cout.tie(nullptr);
 #endif
 #ifdef DEBUG
     auto start = chrono::high_resolution_clock::now();
     freopen("../input.in", "r", stdin);
 #endif
-#ifdef TESTS
-    int t;
+    int t = 1;
+#if TESTS
     cin >> t;
+#endif
     while (t--) {
         solve();
     }
-#else
-    solve();
-#endif
 #ifdef DEBUG
     auto end = chrono::high_resolution_clock::now();
     cout << endl << "_______________\nElapsed: "
@@ -130,5 +131,4 @@ int main() {
 //////////////////////// -- YOUR CODE GOES HERE -- ////////////////////////
 
 void solve() {
-
 }
